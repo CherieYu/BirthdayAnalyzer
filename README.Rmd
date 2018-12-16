@@ -1,36 +1,41 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-BdayAnalyzer
-============
+
+```{r setup, include = FALSE}
+#library(BdayAnalyzer)
+```
+# BdayAnalyzer
 
 The goal of BdayAnalyzer is to help you find the mysterious power of your birthday, including revealing the birthday starsign, element, birthstone, friends, foes and famous people related.
 
 The analyzer can only process birthdays from 1950-01-01 to 2014-12-31.
 
-All information credit to <https://www.thehoroscope.co/birthday-analyser.php>
+All information credit to https://www.thehoroscope.co/birthday-analyser.php
 
-Horoscope
----------
+## Horoscope
 
 This is a basic function helps you find the starsign, element, and birthstone of the birthday desired from birthday analyzer.
 
 A user call the function by puts in birth year, month and day.
 
-`Horoscope(1993,11,15)`
 
-``` r
+```Horoscope(1993,11,15)```
+
+```{r,eval=FALSE }
 Horoscope(1993,11,15)
 ```
 
-`FFF` Function
---------------
-
+##`FFF` Function
 The `FFF` function helps you find the 3 friends , 2 foes , and 3famous people of the birthday desired from birthday analyzer.
 
 A user call the function by puts in birth year, month and day.
 
-`FFF(1993,11,15)`
 
-``` r
+```FFF(1993,11,15)```
+
+```{r ,eval=FALSE}
 FFF(1993,11,15)
 ```

@@ -1,0 +1,83 @@
+---
+title: "Birthday Analyzer"
+author: "Cherie Yu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+library(rvest)
+library(xml2)
+library(httr)
+library(dplyr)
+library(purrr)
+```
+
+
+The `BdayAnalyzer` package contains functions helps you find your birthday secrets
+
+##`Get_Url` Function
+The `Get_Url` function helps you find the url related to your birthday analyzer.
+
+This function asks the user to input birth year, month and day. 
+The function will return the website link on one birthday of this user's input.
+
+```Get_Url(1993,11,15)```
+
+```{r eval=FALSE}
+library(BdayAnalyzer)
+Get_Url(1993,11,15)
+```
+
+Then the function will return the url of the related birthday. And you can check your more birthday features with it later.
+
+
+##`Horoscope` Function
+The `Horscope` function helps you find the starsign, element, and birthstone of the birthday desired from birthday analyzer.
+
+A user call the function by puts in birth year, month and day.
+
+
+```Horoscope(1993,11,15)```
+
+```{r eval=FALSE}
+Horoscope(1993,11,15)
+```
+Then the function will return desired information of the birthday of the user input.
+
+##`FFF` Function
+The `FFF` function helps you find the 3 friends , 2 foes , and 3famous people of the birthday desired from birthday analyzer.
+
+A user call the function by puts in birth year, month and day.
+
+
+```FFF(1993,11,15)```
+
+```{r eval=FALSE}
+FFF(1993,11,15)
+```
+
+
+##`FNelement` `FNstone` `FNstarsign` `FNfamous` `FNfoes` `FNfriend` Function
+
+If you are interested in seeing only element, stone, starsign or one of the relationship info, you can use the simpler function like `FNelement` `FNstone` `FNstarsign` `FNfamous` `FNfoes` `FNfriend`. However, the inputs would require the url you obtained from the `Get_Url` function.
+
+```FNelement```
+```{r,eval=FALSE}
+FNelement("https://www.thehoroscope.co/birthday-analyser/1993-11-15-horoscope-and-zodiac-sign-meanings-16035.html")
+
+```
+
+##`sampledata` Function
+
+Finally, if someone wants to do more analysis on many birthdays, he can refer to the  `sample data` codes we have in the packge. In a nutshell, he can set the begin and end year of desired birthday, and provide birhtay analysis for the frequency he desires and return a dataframe that shows all the data.
+
+```sampledata("1993-11-15","1994-2-15","months")```
+
+```{r eval=FALSE, warning= FALSE}
+sampledata("1993-11-15","1994-2-15","months")
+```

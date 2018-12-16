@@ -1,0 +1,21 @@
+Package: BdayAnalyzer
+Type: Package
+Title: Birthday Analyzer
+Version: 0.1.0
+Authors@R: person("Cherie", "Yu", email = "yuqinyue@hotmail.com",
+  role = c("aut", "cre"))
+Description: This is a birthday analyzer data package that contains birthday related horoscope information and someone can also look up his/her own birthday and find out some interesting details of that birthday including luck, friends, personaly, career.
+Encoding: UTF-8
+LazyData: true
+License: MIT + file LICENSE
+Imports: 
+    dplyr,
+    httr,
+    rvest,
+    purrr,
+    xml2,
+    knitr
+RoxygenNote: 6.1.0.9000
+VignetteBuilder: knitr
+Suggests: 
+    rmarkdown
